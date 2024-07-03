@@ -25,4 +25,25 @@ public class Board {
             System.out.println(" ");
         }
     }
+
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public int[][] getStt() {
+        return stt;
+    }
+
+    public void setStt(int[][] stt) {
+        this.stt = stt;
+    }
+
+    public void setPosition(Position pos, int status){
+        stt[pos.x][pos.y] = status;
+    }
 }
