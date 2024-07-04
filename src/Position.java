@@ -7,6 +7,11 @@ public class Position {
         y = 0;
     }
 
+    Position(int x, int y){
+        this.x = x;
+        this.y = y;
+    }
+
     public Boolean checkValid(int size){
         if (x <= 0 || x > size)
             return Boolean.FALSE;
@@ -15,5 +20,13 @@ public class Position {
             return Boolean.FALSE;
 
         return Boolean.TRUE;
+    }
+
+    void increaseX(){
+        this.x++;
+    }
+
+    void increaseY(){
+        this.y++;
     }
 }

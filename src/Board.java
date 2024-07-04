@@ -4,6 +4,7 @@ public class Board {
     // 0: Does not open yet
     // 1: Select correct
     // 2: Select uncorrected
+    // 3: Player select
     Board(){
         size = 0;
         for (int i = 0;i < 20; i++)
