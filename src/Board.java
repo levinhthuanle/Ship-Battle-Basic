@@ -12,18 +12,33 @@ public class Board {
                 stt[i][j] = 0;
     }
 
-    public void drawBoard(){
-        for (int i = 1;i <= size; i++){
-            for (int j = 1;j <= size; j++){
-                if (stt[i][j] == 0)
-                    System.out.print("0 ");
-                else if (stt[i][j] == 1)
-                    System.out.print("B ");
-                else
-                    System.out.print("x ");
-            }
+    public void drawBoard(Boolean isDisplayed){
 
-            System.out.println(" ");
+        if (!isDisplayed) {
+            for (int i = 1; i <= size; i++) {
+                for (int j = 1; j <= size; j++) {
+                    if (stt[i][j] == 1)
+                        System.out.print("B ");
+                    else if (stt[i][j] == 2)
+                        System.out.print("x ");
+                    else
+                        System.out.print("0 ");
+                }
+
+                System.out.println(" ");
+            }
+        }
+        else {
+            for (int i = 1; i <= size; i++) {
+                for (int j = 1; j <= size; j++) {
+                    if (stt[i][j] == 3)
+                        System.out.print("* ");
+                    else
+                        System.out.print("0 ");
+                }
+
+                System.out.println(" ");
+            }
         }
     }
 
